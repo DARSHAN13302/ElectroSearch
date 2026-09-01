@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenElectronics – News & Reference Platform</title>
-    <!-- Font Awesome & Google Fonts -->
+    <title>ElectroSearch – Open Reference Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
-        /* ===== RESET & BASE (full CSS same as previous, with minor additions) ===== */
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -526,23 +525,6 @@
             margin-bottom: 10px;
             background: var(--bg);
         }
-        .news-source {
-            font-size: 13px;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .news-date {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-        .news-link {
-            color: var(--accent);
-            font-weight: 600;
-            cursor: pointer;
-        }
-        .news-link:hover { text-decoration: underline; }
 
         /* ===== TAB CONTENT ===== */
         .tab-content { display: block; }
@@ -817,13 +799,13 @@
 
         /* ===== SOCIAL COLORS ===== */
         .social-linkedin:hover { color: #0a66c2 !important; }
-        .social-github:hover { color: #333 !important; }
+        .social-github:hover { color: #f0f0f0 !important; }
         .social-facebook:hover { color: #1877f2 !important; }
         .social-instagram:hover { color: #e4405f !important; }
         .social-whatsapp:hover { color: #25D366 !important; }
         .social-telegram:hover { color: #26a5e4 !important; }
         .social-youtube:hover { color: #ff0000 !important; }
-        .social-twitter:hover { color: #000000 !important; }
+        .social-twitter:hover { color: #1DA1F2 !important; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
@@ -950,9 +932,9 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-inner">
-                <a href="#" class="logo" aria-label="OpenElectronics">
+                <a href="#" class="logo" aria-label="ElectroSearch">
                     <i class="fas fa-microchip"></i>
-                    <span>OpenElectronics</span>
+                    <span>ElectroSearch</span>
                 </a>
 
                 <div class="header-search">
@@ -964,13 +946,16 @@
                     <button class="badge-count" data-count="0" id="favBtn" aria-label="Favorites">
                         <i class="fas fa-heart"></i>
                     </button>
-                    <a href="#" id="contactBtn" class="social-icon" aria-label="WhatsApp">
+                    <!-- Social Media Icons in Header -->
+                    <a href="https://www.linkedin.com/darshan-ss-dss" target="_blank" class="social-icon social-linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/DARSHAN13302" target="_blank" class="social-icon social-github" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/darshans0123/" target="_blank" class="social-icon social-instagram" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/DarshanSS1302" target="_blank" class="social-icon social-twitter" aria-label="Twitter" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/darshans0123/" target="_blank" class="social-icon social-facebook" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@CoI-ConstitutionOfIndia" target="_blank" class="social-icon social-youtube" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" id="contactBtn" class="social-icon" aria-label="WhatsApp" title="WhatsApp Group">
                         <i class="fab fa-whatsapp" style="color:#25D366;"></i>
                     </a>
-                    <a href="#" class="social-icon social-linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon social-github" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-icon social-twitter" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="social-icon social-youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     <button id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
                     <button id="resetFiltersBtn" aria-label="Reset filters"><i class="fas fa-undo-alt"></i></button>
                 </div>
@@ -981,7 +966,7 @@
     <!-- ===== TICKER ===== -->
     <div class="ticker" id="ticker">
         <marquee behavior="scroll" direction="left" scrollamount="4">
-            <span id="tickerText">📡 Latest: New 2nm GAA-FET research published • EU launches €2B semiconductor scheme • Digi‑Key opens new logistics hub • </span>
+            <span id="tickerText">📡 Latest: EU launches €2B semiconductor scheme • TSMC begins 2nm production in 2027 • India announces ₹1.5T electronics manufacturing push • New SiC fab opens in China • </span>
         </marquee>
     </div>
 
@@ -1089,7 +1074,6 @@
                     <!-- ===== TAB: SIM FINDER ===== -->
                     <div class="tab-content hidden" id="tabSimfinder">
                         <div class="guided-flow" id="simFinderFlow">
-                            <!-- same as previous, included for completeness -->
                             <div class="step active" data-step="1">
                                 <h3>🔍 Simulation Tool Finder</h3>
                                 <p>Answer a few questions to find the right simulation tool for your project.</p>
@@ -1148,7 +1132,6 @@
                     <!-- ===== TAB: PROBLEM SOLVER ===== -->
                     <div class="tab-content hidden" id="tabProblems">
                         <div class="guided-flow" id="problemSolverFlow">
-                            <!-- same as previous -->
                             <div class="step active" data-step="1">
                                 <h3>🐞 Engineering Problem Solver</h3>
                                 <p>Describe your problem or select a category to get started.</p>
@@ -1184,9 +1167,6 @@
                         </div>
                     </div>
 
-                    <!-- ===== TAB: NEWS (handled by main results) ===== -->
-                    <!-- the results grid is reused for all normal categories -->
-
                     <div class="pagination" id="pagination"></div>
                 </section>
 
@@ -1198,8 +1178,13 @@
     <footer class="footer">
         <div class="container">
             <div class="col">
-                <h4><i class="fas fa-microchip" style="margin-right:8px;color:var(--accent);"></i>OpenElectronics</h4>
-                <p style="font-size:13px;max-width:260px;">An open reference platform for electronics engineering — tools, components, news, and community.</p>
+                <h4><i class="fas fa-microchip" style="margin-right:8px;color:var(--accent);"></i>ElectroSearch</h4>
+                <p style="font-size:13px;max-width:260px;">An open reference platform for electronics engineering — tools, components, news, jobs, and community.</p>
+                <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">
+                    <i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka, India<br />
+                    <i class="fas fa-envelope"></i> darshan@electrosearch.io<br />
+                    <i class="fas fa-phone"></i> +91 98765 43210
+                </p>
             </div>
             <div class="col">
                 <h4>Explore</h4>
@@ -1220,14 +1205,16 @@
             </div>
             <div class="col">
                 <h4>Connect</h4>
-                <a href="#" class="social-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                <a href="#" class="social-github"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" class="social-twitter"><i class="fab fa-x-twitter"></i> Twitter/X</a>
-                <a href="#" class="social-youtube"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://www.linkedin.com/darshan-ss-dss" target="_blank" class="social-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <a href="https://github.com/DARSHAN13302" target="_blank" class="social-github"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://x.com/DarshanSS1302" target="_blank" class="social-twitter"><i class="fab fa-x-twitter"></i> Twitter/X</a>
+                <a href="https://www.instagram.com/darshans0123/" target="_blank" class="social-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/darshans0123/" target="_blank" class="social-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.youtube.com/@CoI-ConstitutionOfIndia" target="_blank" class="social-youtube"><i class="fab fa-youtube"></i> YouTube</a>
                 <a href="#" id="footerWhatsApp" class="social-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Group</a>
             </div>
             <div class="copyright">
-                &copy; 2026 OpenElectronics — Built with <i class="fas fa-heart" style="color:#ef4444;"></i> for the engineering community.
+                &copy; 2026 ElectroSearch — Developed by <strong>Darshan S S</strong> with <i class="fas fa-heart" style="color:#ef4444;"></i> for the engineering community.
             </div>
         </div>
     </footer>
@@ -1263,145 +1250,247 @@
     <div class="toast-container" id="toastContainer"></div>
 
     <!-- ============================================================ -->
-    <!-- JAVASCRIPT – Complete Platform Logic with News                -->
+    <!-- JAVASCRIPT – Full Platform Logic                              -->
     <!-- ============================================================ -->
     <script>
         (function() {
             'use strict';
 
             // ================================================================
-            // 1. MOCK DATA – including NEWS (20+ entries)
+            // 1. MOCK DATA – Complete with all categories including NEWS
             // ================================================================
 
-            const CATEGORIES = ['tools', 'components', 'companies', 'standards', 'research', 'jobs', 'learning', 'problems',
-                'projects', 'news'
-            ];
+            const FULL_DATA = [
+                // ===== TOOLS (EDA, Simulation, PCB, IC, FPGA) =====
+                { id: 1, category: 'tools', title: 'KiCad EDA', description: 'Open-source PCB design suite with schematic capture, layout, and 3D viewer.',
+                    tags: ['PCB', 'Schematic', 'Open Source'], provider: 'KiCad', price: 0, rating: 4.9,
+                    verification: 'verified' },
+                { id: 2, category: 'tools', title: 'LTspice', description: 'High-performance SPICE simulator from Analog Devices, widely used for analog and power circuits.',
+                    tags: ['Simulation', 'SPICE', 'Analog'], provider: 'Analog Devices', price: 0, rating: 4.8,
+                    verification: 'verified' },
+                { id: 3, category: 'tools', title: 'OpenROAD', description: 'Open-source RTL-to-GDSII flow for digital ASIC design, including synthesis, placement, and routing.',
+                    tags: ['ASIC', 'RTL', 'Synthesis'], provider: 'OpenROAD Project', price: 0, rating: 4.5,
+                    verification: 'review' },
+                { id: 4, category: 'tools', title: 'CST Studio Suite', description: '3D electromagnetic simulation for RF, microwave, and high-speed signal integrity.',
+                    tags: ['EM', 'RF', 'Simulation'], provider: 'Dassault Systèmes', price: 3500, rating: 4.7,
+                    verification: 'verified' },
+                { id: 5, category: 'tools', title: 'Altium Designer', description: 'Professional PCB design platform with advanced routing, simulation, and manufacturing outputs.',
+                    tags: ['PCB', 'Professional', 'Commercial'], provider: 'Altium', price: 3000, rating: 4.6,
+                    verification: 'verified' },
+                { id: 6, category: 'tools', title: 'Qucs-S', description: 'Open-source circuit simulator with SPICE and Verilog-A support, for analog and RF design.',
+                    tags: ['Simulation', 'RF', 'Open Source'], provider: 'Qucs Project', price: 0, rating: 4.4,
+                    verification: 'review' },
+                { id: 7, category: 'tools', title: 'Xilinx Vivado', description: 'FPGA design suite for synthesis, implementation, and debugging of Xilinx devices.',
+                    tags: ['FPGA', 'Synthesis', 'Implementation'], provider: 'AMD/Xilinx', price: 0, rating: 4.5,
+                    verification: 'verified' },
+                { id: 8, category: 'tools', title: 'Synopsys HSPICE', description: 'Industry-standard circuit simulation for analog, RF, and memory designs.',
+                    tags: ['Simulation', 'Analog', 'Commercial'], provider: 'Synopsys', price: 5000, rating: 4.8,
+                    verification: 'verified' },
+                { id: 9, category: 'tools', title: 'FreeCAD', description: 'Open-source parametric 3D CAD with electronics workbench for enclosures and mechanical parts.',
+                    tags: ['CAD', 'Mechanical', 'Open Source'], provider: 'FreeCAD Community', price: 0, rating: 4.3,
+                    verification: 'review' },
+                { id: 10, category: 'tools', title: 'TINA-TI', description: 'Free SPICE simulator from Texas Instruments, includes model library for TI components.',
+                    tags: ['Simulation', 'SPICE', 'Free'], provider: 'Texas Instruments', price: 0, rating: 4.4,
+                    verification: 'verified' },
+                { id: 11, category: 'tools', title: 'Cadence Virtuoso', description: 'Advanced custom IC design platform for analog, RF, and mixed-signal designs.',
+                    tags: ['IC Design', 'Analog', 'Professional'], provider: 'Cadence', price: 8000, rating: 4.9,
+                    verification: 'verified' },
+                { id: 12, category: 'tools', title: 'ModelSim', description: 'HDL simulation and verification environment for FPGA and ASIC designs.',
+                    tags: ['HDL', 'Simulation', 'Verification'], provider: 'Siemens EDA', price: 2500, rating: 4.6,
+                    verification: 'verified' },
 
-            const MOCK_DATA = [
-                // (Existing data from previous version – kept for completeness)
-                // ... (I will include a condensed version here to save space, but the final file will have all entries)
-                // For brevity, I'll add only the new NEWS items and a few representative others.
-                // In the actual final code, you would include all previous entries.
+                // ===== COMPONENTS =====
+                { id: 101, category: 'components', title: 'SiC MOSFET C3M0060065K',
+                    description: '650V, 60mΩ Silicon Carbide MOSFET in TO-247 package, suitable for high-frequency power conversion.',
+                    tags: ['SiC', 'MOSFET', 'Power'], supplier: 'Wolfspeed', price: 12.50, rating: 4.8,
+                    verification: 'verified' },
+                { id: 102, category: 'components', title: 'GaN Systems GS-065-011-1-L',
+                    description: '650V, 11A GaN E‑HEMT in DFN package, ultra‑low Qg for high‑density power supplies.',
+                    tags: ['GaN', 'HEMT', 'Power'], supplier: 'GaN Systems', price: 8.75, rating: 4.6,
+                    verification: 'verified' },
+                { id: 103, category: 'components', title: 'EPC2215 eGaN FET',
+                    description: '200V, 10A enhancement‑mode GaN transistor in ultra‑small footprint, ideal for LiDAR and resonant converters.',
+                    tags: ['GaN', 'FET', 'Low Vgs'], supplier: 'EPC', price: 5.20, rating: 4.7,
+                    verification: 'verified' },
+                { id: 104, category: 'components', title: 'LMG3425R030 GaN FET',
+                    description: '600V, 30mΩ GaN with integrated driver, protection, and temperature sensing.',
+                    tags: ['GaN', 'Integrated Driver', 'Power'], supplier: 'Texas Instruments', price: 15.00,
+                    rating: 4.9, verification: 'verified' },
+                { id: 105, category: 'components', title: 'NXP LPC55S69 MCU',
+                    description: 'ARM Cortex‑M33 dual‑core MCU with TrustZone, high‑performance for industrial IoT.',
+                    tags: ['MCU', 'ARM', 'IoT'], supplier: 'NXP', price: 8.90, rating: 4.6,
+                    verification: 'verified' },
+                { id: 106, category: 'components', title: 'Analog Devices AD8421',
+                    description: 'Low‑power, high‑speed instrumentation amplifier with 10 MHz bandwidth.',
+                    tags: ['Op‑Amp', 'Instrumentation', 'Analog'], supplier: 'Analog Devices', price: 3.40,
+                    rating: 4.7, verification: 'verified' },
+
+                // ===== COMPANIES =====
+                { id: 201, category: 'companies', title: 'TSMC', description: 'Taiwan Semiconductor Manufacturing Company — world’s largest dedicated semiconductor foundry, offering advanced nodes (5nm, 3nm, 2nm).',
+                    tags: ['Foundry', 'Semiconductor', 'Advanced Node'], location: 'Taiwan', rating: 4.9,
+                    verification: 'verified' },
+                { id: 202, category: 'companies', title: 'Digi‑Key Electronics', description: 'Global distributor of electronic components with deep inventory, technical support, and fast shipping.',
+                    tags: ['Distributor', 'Components', 'Global'], location: 'USA', rating: 4.8,
+                    verification: 'verified' },
+                { id: 203, category: 'companies', title: 'PCB Fabrication — Advanced Circuits',
+                    description: 'Quick‑turn PCB prototyping with HDI, flex, and rigid‑flex capabilities, plus assembly services.',
+                    tags: ['PCB', 'Manufacturing', 'Prototype'], location: 'USA', rating: 4.7,
+                    verification: 'verified' },
+                { id: 204, category: 'companies', title: 'STMicroelectronics', description: 'European semiconductor manufacturer with broad portfolio in automotive, industrial, and IoT.',
+                    tags: ['Semiconductor', 'IDM', 'Automotive'], location: 'Europe', rating: 4.8,
+                    verification: 'verified' },
+
+                // ===== STANDARDS =====
+                { id: 301, category: 'standards', title: 'IPC-2221B — Generic PCB Design',
+                    description: 'Covers design requirements for rigid, flex, and rigid‑flex printed boards, including material and construction standards.',
+                    tags: ['PCB', 'Design', 'IPC'], organization: 'IPC', version: 'B', rating: 4.9,
+                    verification: 'verified' },
+                { id: 302, category: 'standards', title: 'JESD209-5 — LPDDR5 SDRAM',
+                    description: 'JEDEC standard for low‑power DDR5 SDRAM, detailing electrical, timing, and protocol specifications.',
+                    tags: ['Memory', 'LPDDR5', 'JEDEC'], organization: 'JEDEC', version: '5', rating: 4.7,
+                    verification: 'verified' },
+                { id: 303, category: 'standards', title: 'IEEE 802.3bz — Multi‑Gigabit Ethernet',
+                    description: 'Physical layer specifications for 2.5G and 5G Ethernet over copper cabling.',
+                    tags: ['Ethernet', 'Networking', 'IEEE'], organization: 'IEEE', version: '802.3bz', rating: 4.6,
+                    verification: 'verified' },
+                { id: 304, category: 'standards', title: 'IEC 61000-4-2 — ESD Immunity',
+                    description: 'Electrostatic discharge immunity testing for electronic equipment, covering test levels and procedures.',
+                    tags: ['EMC', 'ESD', 'IEC'], organization: 'IEC', version: '4‑2', rating: 4.8,
+                    verification: 'verified' },
+
+                // ===== RESEARCH =====
+                { id: 401, category: 'research', title: '2nm GAA‑FET with SiGe Channels',
+                    description: 'Novel gate‑all‑around architecture achieving 35% higher drive current and 20% lower capacitance compared to FinFET.',
+                    tags: ['GAA‑FET', '2nm', 'Advanced Node'], authors: 'Chen et al.', journal: 'Nature Electronics',
+                    date: '2026-06-01', rating: 4.9, verification: 'verified' },
+                { id: 402, category: 'research', title: 'Microfluidic Cooling for 3D Stacked Dies',
+                    description: 'Embedded cooling channels reduce junction temperature by 25°C in 3D IC stacks, enabling higher performance.',
+                    tags: ['Thermal', '3D IC', 'Cooling'], authors: 'Kim, J. & Lee, S.', journal: 'IEEE T-CPMT',
+                    date: '2026-05-15', rating: 4.7, verification: 'review' },
+                { id: 403, category: 'research', title: 'AI‑Driven Analog IC Placement Optimization',
+                    description: 'Reinforcement learning reduces wirelength by 18% in 28nm analog layouts, with improved matching.',
+                    tags: ['AI', 'Analog', 'Layout'], authors: 'Gupta, R. et al.', journal: 'DAC 2026',
+                    date: '2026-04-20', rating: 4.8, verification: 'verified' },
+
+                // ===== JOBS =====
+                { id: 501, category: 'jobs', title: 'Senior Power Electronics Engineer',
+                    description: 'Design and test high‑efficiency power converters for automotive traction inverters and onboard chargers.',
+                    tags: ['Power', 'Automotive', 'Converter'], location: 'Austin, TX', company: 'Tesla',
+                    salary: '$140k – $180k', posted: '2026-08-28', rating: 4.9, verification: 'verified' },
+                { id: 502, category: 'jobs', title: 'RF / Microwave Design Engineer',
+                    description: 'Develop 5G transceivers, phased‑array antennas, and RF front‑end modules for next‑generation communication.',
+                    tags: ['RF', '5G', 'Antenna'], location: 'San Diego, CA', company: 'Qualcomm',
+                    salary: '$150k – $200k', posted: '2026-08-25', rating: 4.8, verification: 'verified' },
+                { id: 503, category: 'jobs', title: 'PCB Layout Specialist',
+                    description: 'High‑speed digital PCB design for server motherboards, with expertise in DDR5 and PCIe Gen 5 routing.',
+                    tags: ['PCB', 'High‑Speed', 'Layout'], location: 'Taipei, TW', company: 'ASUS',
+                    salary: 'NT$1.2M – 1.8M', posted: '2026-08-20', rating: 4.5, verification: 'review' },
+                { id: 504, category: 'jobs', title: 'ASIC Verification Engineer',
+                    description: 'UVM verification for AI accelerator chips, including testbench development and coverage closure.',
+                    tags: ['ASIC', 'Verification', 'UVM'], location: 'Santa Clara, CA', company: 'NVIDIA',
+                    salary: '$170k – $220k', posted: '2026-08-18', rating: 4.9, verification: 'verified' },
+
+                // ===== LEARNING =====
+                { id: 601, category: 'learning', title: 'PID Control for Power Supplies',
+                    description: 'A comprehensive tutorial on proportional‑integral‑derivative control loops for switched‑mode power supplies, with design examples.',
+                    tags: ['Control Theory', 'Power Supplies', 'Tutorial'], source: 'EDN', date: '2026-08-01',
+                    rating: 4.9, verification: 'verified' },
+                { id: 602, category: 'learning', title: 'High‑Speed PCB Stack‑up Design',
+                    description: 'Layer count, material selection, and impedance control guidelines for signals above 10 Gbps.',
+                    tags: ['PCB', 'High‑Speed', 'Stack‑up'], source: 'IEEE Spectrum', date: '2026-07-20',
+                    rating: 4.6, verification: 'verified' },
+                { id: 603, category: 'learning', title: 'RF Impedance Matching with Smith Chart',
+                    description: 'Practical matching techniques for RF amplifiers using L‑networks, with interactive examples.',
+                    tags: ['RF', 'Impedance', 'Smith Chart'], source: 'Microwave Journal', date: '2026-07-15',
+                    rating: 4.8, verification: 'verified' },
+
+                // ===== PROBLEMS (Troubleshooting) =====
+                { id: 701, category: 'problems', title: 'Signal Integrity Failure in DDR5 Routing',
+                    description: 'Reflections and crosstalk causing data corruption at 6400 MT/s. Need termination strategy and optimized routing.',
+                    tags: ['DDR5', 'SI', 'Routing'], posted: '2026-08-25', author: 'Jane R.', rating: 4.8,
+                    verification: 'review' },
+                { id: 702, category: 'problems', title: 'Thermal Runaway in GaN Power Stage',
+                    description: 'Self‑heating causes Vth shift and eventual failure in automotive DC‑DC converter. Need thermal management and derating.',
+                    tags: ['GaN', 'Thermal', 'Power'], posted: '2026-08-20', author: 'Mike L.', rating: 4.5,
+                    verification: 'review' },
+                { id: 703, category: 'problems', title: 'EMI Compliance Failure for Motor Drive',
+                    description: 'Conducted emissions exceed CISPR 11 limits at 2‑10 MHz. Filter design and layout changes needed.',
+                    tags: ['EMI', 'Motor', 'Compliance'], posted: '2026-08-15', author: 'Sara K.', rating: 4.2,
+                    verification: 'review' },
+
+                // ===== PROJECTS =====
+                { id: 801, category: 'projects', title: 'OpenScope M2', description: 'Open‑source oscilloscope with 10 MSa/s, 2 channels, and Python API for automated testing.',
+                    tags: ['Test', 'Oscilloscope', 'Open Source'], repo: 'https://github.com/OpenScope/m2',
+                    license: 'MIT', stars: 1200, rating: 4.6, verification: 'verified' },
+                { id: 802, category: 'projects', title: 'Fobos SDR', description: 'Software‑defined radio project using Xilinx Zynq, covering 100 kHz – 6 GHz with open‑source FPGA code.',
+                    tags: ['SDR', 'FPGA', 'RF'], repo: 'https://github.com/fobos/sdr', license: 'Apache-2.0',
+                    stars: 850, rating: 4.7, verification: 'review' },
+
                 // ===== NEWS =====
-                { id: 100, category: 'news', title: 'EU Launches €2B Semiconductor Scheme',
+                { id: 901, category: 'news', title: 'EU Launches €2B Semiconductor Scheme',
                     description: 'The European Chips Act funds research, manufacturing, and supply chain resilience, aiming to double Europe’s market share.',
                     source: 'Reuters', date: '2026-08-30', image: 'https://picsum.photos/seed/eu/400/200',
-                    link: 'https://example.com/eu-chips', tags: ['Europe', 'Funding', 'Chips Act'], rating: 4.9,
-                    verification: 'verified' },
-                { id: 101, category: 'news', title: 'TSMC Begins 2nm Production in 2027',
+                    link: 'https://www.reuters.com/technology/eu-chips-act-2026', tags: ['Europe', 'Funding',
+                        'Chips Act'
+                    ], rating: 4.9, verification: 'verified' },
+                { id: 902, category: 'news', title: 'TSMC Begins 2nm Production in 2027',
                     description: 'TSMC has announced that its 2nm process (N2) will enter risk production in 2027, featuring GAA-FETs and backside power delivery.',
                     source: 'EETimes', date: '2026-08-28', image: 'https://picsum.photos/seed/tsmc/400/200',
-                    link: 'https://example.com/tsmc-2nm', tags: ['TSMC', '2nm', 'GAA'], rating: 4.8,
+                    link: 'https://www.eetimes.com/tsmc-2nm-2027', tags: ['TSMC', '2nm', 'GAA'], rating: 4.8,
                     verification: 'verified' },
-                { id: 102, category: 'news', title: 'India Announces ₹1.5 Trillion Electronics Manufacturing Push',
+                { id: 903, category: 'news', title: 'India Announces ₹1.5 Trillion Electronics Manufacturing Push',
                     description: 'The Indian government has approved a new incentive scheme for semiconductor assembly, test, and packaging (OSAT) facilities.',
                     source: 'The Hindu', date: '2026-08-26', image: 'https://picsum.photos/seed/india/400/200',
-                    link: 'https://example.com/india-scheme', tags: ['India', 'Manufacturing', 'Investment'],
-                    rating: 4.7, verification: 'review' },
-                { id: 103, category: 'news', title: 'New Material Doubles Solar Cell Efficiency',
+                    link: 'https://www.thehindu.com/india-electronics-scheme', tags: ['India', 'Manufacturing',
+                        'Investment'
+                    ], rating: 4.7, verification: 'review' },
+                { id: 904, category: 'news', title: 'New Material Doubles Solar Cell Efficiency',
                     description: 'Researchers have developed a perovskite‑silicon tandem cell that achieves 33.7% efficiency, a new record.',
                     source: 'Nature Electronics', date: '2026-08-24', image: 'https://picsum.photos/seed/solar/400/200',
-                    link: 'https://example.com/solar-record', tags: ['Solar', 'Renewable', 'Research'], rating: 4.9,
-                    verification: 'verified' },
-                { id: 104, category: 'news', title: 'Global Chip Sales Rise 18% in Q2 2026',
+                    link: 'https://www.nature.com/solar-record', tags: ['Solar', 'Renewable', 'Research'],
+                    rating: 4.9, verification: 'verified' },
+                { id: 905, category: 'news', title: 'Global Chip Sales Rise 18% in Q2 2026',
                     description: 'Semiconductor industry revenues grew 18% year‑over‑year, driven by AI, automotive, and industrial demand.',
                     source: 'SIA', date: '2026-08-22', image: 'https://picsum.photos/seed/chipsales/400/200',
-                    link: 'https://example.com/chip-sales', tags: ['Market', 'Sales', 'AI'], rating: 4.6,
-                    verification: 'verified' },
-                { id: 105, category: 'news', title: 'Digi‑Key Expands European Logistics Hub',
+                    link: 'https://www.semiconductors.org/chip-sales-q2-2026', tags: ['Market', 'Sales', 'AI'],
+                    rating: 4.6, verification: 'verified' },
+                { id: 906, category: 'news', title: 'Digi‑Key Expands European Logistics Hub',
                     description: 'Digi‑Key has opened a new 50,000 m² warehouse in Germany to improve delivery times across Europe.',
                     source: 'Electronics Weekly', date: '2026-08-20', image: 'https://picsum.photos/seed/digikey/400/200',
-                    link: 'https://example.com/digikey-hub', tags: ['Distribution', 'Logistics', 'Europe'],
-                    rating: 4.5, verification: 'review' },
-                { id: 106, category: 'news', title: 'Open‑Source FPGA Toolchain Reaches 1.0',
+                    link: 'https://www.electronicsweekly.com/digikey-hub', tags: ['Distribution', 'Logistics',
+                        'Europe'
+                    ], rating: 4.5, verification: 'review' },
+                { id: 907, category: 'news', title: 'Open‑Source FPGA Toolchain Reaches 1.0',
                     description: 'The open‑source FPGA toolchain (Yosys/nextpnr) has reached version 1.0, supporting all major vendor devices.',
                     source: 'Hackaday', date: '2026-08-18', image: 'https://picsum.photos/seed/fpga/400/200',
-                    link: 'https://example.com/open-fpga', tags: ['FPGA', 'Open Source', 'Toolchain'], rating: 4.8,
-                    verification: 'verified' },
-                { id: 107, category: 'news', title: 'Apple’s M4 Chip Uses TSMC’s 3nm Enhanced Node',
-                    description: 'Apple’s next‑generation M4 SoC is built on an enhanced 3nm process, offering 20% better performance per watt.',
-                    source: 'TechCrunch', date: '2026-08-16', image: 'https://picsum.photos/seed/apple/400/200',
-                    link: 'https://example.com/apple-m4', tags: ['Apple', '3nm', 'Performance'], rating: 4.7,
-                    verification: 'review' },
-                { id: 108, category: 'news', title: 'US CHIPS Act: First Funding Awards Announced',
+                    link: 'https://hackaday.com/open-fpga-1.0', tags: ['FPGA', 'Open Source', 'Toolchain'],
+                    rating: 4.8, verification: 'verified' },
+                { id: 908, category: 'news', title: 'US CHIPS Act: First Funding Awards Announced',
                     description: 'The US Commerce Department has awarded the first $1.5B in CHIPS Act funding to semiconductor projects in Texas and Ohio.',
                     source: 'Bloomberg', date: '2026-08-14', image: 'https://picsum.photos/seed/chipsact/400/200',
-                    link: 'https://example.com/us-chips', tags: ['USA', 'Funding', 'CHIPS Act'], rating: 4.6,
-                    verification: 'verified' },
-                { id: 109, category: 'news', title: 'New 6G Research Initiative Launched by EU and Japan',
+                    link: 'https://www.bloomberg.com/us-chips-funding', tags: ['USA', 'Funding', 'CHIPS Act'],
+                    rating: 4.6, verification: 'verified' },
+                { id: 909, category: 'news', title: 'New 6G Research Initiative Launched by EU and Japan',
                     description: 'A joint European‑Japanese research program will explore terahertz communications and AI‑native 6G networks.',
                     source: 'IEEE Spectrum', date: '2026-08-12', image: 'https://picsum.photos/seed/6g/400/200',
-                    link: 'https://example.com/6g-research', tags: ['6G', 'Research', 'EU', 'Japan'], rating: 4.8,
-                    verification: 'verified' },
-                { id: 110, category: 'news', title: 'Rohde & Schwarz Unveils New 110 GHz Oscilloscope',
-                    description: 'The new R&S®RTP-series oscilloscope offers 110 GHz bandwidth with 256 GSa/s, ideal for mmWave and optical applications.',
-                    source: 'Microwave Journal', date: '2026-08-10', image: 'https://picsum.photos/seed/scope/400/200',
-                    link: 'https://example.com/110ghz-scope', tags: ['Test', 'Oscilloscope', 'mmWave'], rating: 4.9,
-                    verification: 'verified' },
-                { id: 111, category: 'news', title: 'UK Announces £1B Semiconductor Strategy',
+                    link: 'https://spectrum.ieee.org/6g-research', tags: ['6G', 'Research', 'EU', 'Japan'],
+                    rating: 4.8, verification: 'verified' },
+                { id: 910, category: 'news', title: 'UK Announces £1B Semiconductor Strategy',
                     description: 'The UK government has pledged £1B over ten years to boost semiconductor design, fabrication, and packaging capabilities.',
                     source: 'BBC News', date: '2026-08-08', image: 'https://picsum.photos/seed/uk/400/200',
-                    link: 'https://example.com/uk-strategy', tags: ['UK', 'Funding', 'Semiconductor'], rating: 4.5,
-                    verification: 'review' },
-                { id: 112, category: 'news', title: 'New SiC Production Facility Opens in China',
+                    link: 'https://www.bbc.com/uk-semiconductor-strategy', tags: ['UK', 'Funding', 'Semiconductor'],
+                    rating: 4.5, verification: 'review' },
+                { id: 911, category: 'news', title: 'New SiC Production Facility Opens in China',
                     description: 'A new 150mm SiC wafer fabrication plant has started production in Shanghai, targeting electric vehicle power modules.',
                     source: 'Nikkei Asia', date: '2026-08-06', image: 'https://picsum.photos/seed/sic/400/200',
-                    link: 'https://example.com/sic-fab', tags: ['SiC', 'EV', 'China'], rating: 4.7,
+                    link: 'https://asia.nikkei.com/sic-fab-china', tags: ['SiC', 'EV', 'China'], rating: 4.7,
                     verification: 'verified' },
-                { id: 113, category: 'news', title: 'Google’s Quantum Chip Achieves Error Correction Milestone',
+                { id: 912, category: 'news', title: 'Google’s Quantum Chip Achieves Error Correction Milestone',
                     description: 'Google’s Sycamore processor has demonstrated a quantum error correction code that reduces logical error rates by 50%.',
                     source: 'Nature Physics', date: '2026-08-04', image: 'https://picsum.photos/seed/quantum/400/200',
-                    link: 'https://example.com/quantum-error', tags: ['Quantum', 'Error Correction', 'Google'],
+                    link: 'https://www.nature.com/quantum-error', tags: ['Quantum', 'Error Correction', 'Google'],
                     rating: 4.9, verification: 'verified' },
-                { id: 114, category: 'news', title: 'Silicon Photonics Market to Reach $3B by 2030',
-                    description: 'Silicon photonics is projected to grow at a CAGR of 25%, driven by data center and 5G/6G optical interconnects.',
-                    source: 'Yole Group', date: '2026-08-02', image: 'https://picsum.photos/seed/photonics/400/200',
-                    link: 'https://example.com/photonics-market', tags: ['Photonics', 'Market', 'Data Center'],
-                    rating: 4.6, verification: 'review' },
             ];
-
-            // Add some existing entries to ensure other tabs work (abbreviated)
-            // For brevity, we'll just include a few from each category to test
-            const EXISTING = [
-                // tools
-                { id: 1, category: 'tools', title: 'KiCad EDA', description: 'Open-source PCB design suite.',
-                    tags: ['PCB', 'Open Source'], price: 0, rating: 4.9, verification: 'verified' },
-                { id: 2, category: 'tools', title: 'LTspice', description: 'High-performance SPICE simulator.',
-                    tags: ['Simulation', 'Analog'], price: 0, rating: 4.8, verification: 'verified' },
-                // components
-                { id: 11, category: 'components', title: 'SiC MOSFET C3M0060065K',
-                    description: '650V, 60mΩ SiC MOSFET.', tags: ['SiC', 'MOSFET'], price: 12.50, rating: 4.8,
-                    verification: 'verified' },
-                // companies
-                { id: 19, category: 'companies', title: 'TSMC', description: 'Leading semiconductor foundry.',
-                    tags: ['Foundry'], location: 'Taiwan', rating: 4.9, verification: 'verified' },
-                // standards
-                { id: 25, category: 'standards', title: 'IPC-2221B', description: 'PCB design standard.',
-                    tags: ['PCB', 'Design'], organization: 'IPC', rating: 4.9, verification: 'verified' },
-                // research
-                { id: 29, category: 'research', title: '2nm GAA-FET with SiGe Channels',
-                    description: 'Novel GAA architecture.', tags: ['GAA', '2nm'], authors: 'Chen et al.',
-                    journal: 'Nature', rating: 4.9, verification: 'verified' },
-                // jobs
-                { id: 33, category: 'jobs', title: 'Senior Power Electronics Engineer',
-                    description: 'Design high‑efficiency converters.', tags: ['Power'], location: 'Austin, TX',
-                    company: 'Tesla', salary: '$140k – $180k', rating: 4.9, verification: 'verified' },
-                // learning
-                { id: 37, category: 'learning', title: 'PID Control for Power Supplies',
-                    description: 'A comprehensive tutorial.', tags: ['Control'], source: 'EDN', rating: 4.9,
-                    verification: 'verified' },
-                // problems
-                { id: 41, category: 'problems', title: 'Signal Integrity Failure in DDR5',
-                    description: 'Crosstalk causing data corruption.', tags: ['DDR5'], rating: 4.8,
-                    verification: 'review' },
-                // projects
-                { id: 45, category: 'projects', title: 'OpenScope M2', description: 'Open‑source oscilloscope.',
-                    tags: ['Test', 'Oscilloscope'], repo: 'https://github.com', license: 'MIT', rating: 4.6,
-                    verification: 'verified' },
-            ];
-
-            // Combine all: spread existing + news
-            const FULL_DATA = [...EXISTING, ...MOCK_DATA];
 
             // ================================================================
             // 2. STATE
@@ -1411,7 +1500,7 @@
                 activeTab: 'all',
                 currentPage: 1,
                 pageSize: 10,
-                favorites: JSON.parse(localStorage.getItem('oe_favorites') || '[]'),
+                favorites: JSON.parse(localStorage.getItem('electro_favorites') || '[]'),
                 categoryFilter: 'all',
                 priceMin: '',
                 priceMax: '',
@@ -1458,7 +1547,7 @@
             };
 
             // ================================================================
-            // 4. UTILITY FUNCTIONS (same as before)
+            // 4. UTILITY FUNCTIONS
             // ================================================================
             function getInitials(str) {
                 return str.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
@@ -1481,7 +1570,7 @@
                 const idx = state.favorites.indexOf(id);
                 if (idx > -1) state.favorites.splice(idx, 1);
                 else state.favorites.push(id);
-                localStorage.setItem('oe_favorites', JSON.stringify(state.favorites));
+                localStorage.setItem('electro_favorites', JSON.stringify(state.favorites));
                 updateFavBadge();
                 renderResults();
                 showToast(idx > -1 ? 'Removed from favorites' : 'Added to favorites', idx > -1 ? 'info' : 'success');
@@ -1531,7 +1620,7 @@
             }
 
             // ================================================================
-            // 5. FILTERING & SORTING (with date support)
+            // 5. FILTERING & SORTING
             // ================================================================
             function filterData() {
                 let results = [...FULL_DATA];
@@ -1593,14 +1682,13 @@
                         sorted.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
                         break;
                     default:
-                        // relevance: keep original order
                         break;
                 }
                 return sorted;
             }
 
             // ================================================================
-            // 6. RENDER (with news-specific card layout)
+            // 6. RENDER
             // ================================================================
             function renderResults() {
                 if (state.activeTab === 'simfinder' || state.activeTab === 'problems') {
@@ -1652,14 +1740,12 @@
                     if (d.source) extraMeta += `<span><i class="fas fa-newspaper"></i> ${d.source}</span>`;
                     if (d.date) extraMeta += `<span><i class="fas fa-calendar"></i> ${d.date}</span>`;
 
-                    // For news items, show image if available
                     let imageHtml = '';
                     if (d.category === 'news' && d.image) {
                         imageHtml =
                             `<img src="${d.image}" alt="${d.title}" class="news-image" loading="lazy" onerror="this.style.display='none'" />`;
                     }
 
-                    // Build card
                     return `
                         <div class="data-card" data-id="${d.id}">
                             ${imageHtml}
@@ -1753,7 +1839,7 @@
             }
 
             // ================================================================
-            // 7. DETAIL MODAL (extended for news with image)
+            // 7. DETAIL MODAL
             // ================================================================
             function showDetail(id) {
                 const item = FULL_DATA.find(d => d.id === id);
@@ -1811,7 +1897,7 @@
                     ${tags ? `<div style="margin:12px 0;"><strong>Tags:</strong> <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">${tags}</div></div>` : ''}
                     <div class="modal-actions">
                         ${item.link ? `<a href="${item.link}" target="_blank" class="primary" style="padding:10px 22px;border-radius:var(--radius-sm);font-weight:600;font-size:14px;background:var(--accent);color:#fff;text-decoration:none;"><i class="fas fa-external-link-alt"></i> Read full article</a>` : ''}
-                        <button class="primary" onclick="window.location.href='mailto:contact@example.com'">
+                        <button class="primary" onclick="window.location.href='mailto:darshan@electrosearch.io'">
                             <i class="fas fa-envelope"></i> Contact
                         </button>
                         <button onclick="toggleFavorite(${item.id}); showDetail(${item.id});">
@@ -1825,7 +1911,7 @@
             }
 
             // ================================================================
-            // 8. TAB & UI EVENTS (updated to include 'news')
+            // 8. TAB & UI EVENTS
             // ================================================================
             function switchTab(tab) {
                 state.activeTab = tab;
@@ -1894,13 +1980,216 @@
             }
 
             // ================================================================
-            // 9. SIM FINDER & PROBLEM SOLVER (same as before)
+            // 9. SIM FINDER
             // ================================================================
-            // (Keep the existing implementation from previous code)
-            // For brevity, I'm not repeating the full code here, but it's included in the final file.
+            function resetSimFinder() {
+                state.simSelections = { category: '', application: '', license: '' };
+                const steps = dom.simFinderFlow.querySelectorAll('.step');
+                steps.forEach(s => s.classList.remove('active'));
+                document.querySelector('#simFinderFlow .step[data-step="1"]').classList.add('active');
+                document.querySelectorAll('#simFinderFlow .options button').forEach(b => b.classList.remove('selected'));
+                document.getElementById('simResultsList').innerHTML = '';
+            }
+
+            function initSimFinder() {
+                document.getElementById('simNext1').addEventListener('click', () => {
+                    const selected = document.querySelector('#simFinderFlow .step[data-step="1"] .options button.selected');
+                    if (!selected) { showToast('Please select a simulation type.', 'error'); return; }
+                    state.simSelections.category = selected.dataset.value;
+                    document.querySelector('#simFinderFlow .step[data-step="1"]').classList.remove('active');
+                    document.querySelector('#simFinderFlow .step[data-step="2"]').classList.add('active');
+                });
+                document.getElementById('simNext2').addEventListener('click', () => {
+                    const selected = document.querySelector('#simFinderFlow .step[data-step="2"] .options button.selected');
+                    if (!selected) { showToast('Please select an application area.', 'error'); return; }
+                    state.simSelections.application = selected.dataset.value;
+                    document.querySelector('#simFinderFlow .step[data-step="2"]').classList.remove('active');
+                    document.querySelector('#simFinderFlow .step[data-step="3"]').classList.add('active');
+                });
+                document.getElementById('simBack2').addEventListener('click', () => {
+                    document.querySelector('#simFinderFlow .step[data-step="2"]').classList.remove('active');
+                    document.querySelector('#simFinderFlow .step[data-step="1"]').classList.add('active');
+                });
+                document.getElementById('simBack3').addEventListener('click', () => {
+                    document.querySelector('#simFinderFlow .step[data-step="3"]').classList.remove('active');
+                    document.querySelector('#simFinderFlow .step[data-step="2"]').classList.add('active');
+                });
+                document.getElementById('simFindResults').addEventListener('click', () => {
+                    const selected = document.querySelector('#simFinderFlow .step[data-step="3"] .options button.selected');
+                    if (!selected) { showToast('Please select a license preference.', 'error'); return; }
+                    state.simSelections.license = selected.dataset.value;
+                    const results = generateSimResults();
+                    const list = document.getElementById('simResultsList');
+                    list.innerHTML = results.map(r =>
+                        `<li><i class="fas fa-check-circle"></i> <strong>${r}</strong></li>`
+                    ).join('');
+                    document.querySelector('#simFinderFlow .step[data-step="3"]').classList.remove('active');
+                    document.querySelector('#simFinderFlow .step[data-step="4"]').classList.add('active');
+                });
+                document.getElementById('simReset').addEventListener('click', resetSimFinder);
+
+                dom.simFinderFlow.querySelectorAll('.step .options button').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const parent = btn.closest('.step');
+                        parent.querySelectorAll('.options button').forEach(b => b.classList.remove('selected'));
+                        btn.classList.add('selected');
+                    });
+                });
+            }
+
+            function generateSimResults() {
+                const cat = state.simSelections.category;
+                const lic = state.simSelections.license;
+
+                const toolMap = {
+                    analog: ['LTspice (Free)', 'TINA-TI (Free)', 'Qucs-S (Open Source)', 'HSPICE (Commercial)'],
+                    digital: ['Verilog Simulation (Icarus, VCS)', 'ModelSim (Commercial)', 'GHDL (Open Source)'],
+                    mixed: ['Cadence Virtuoso (Commercial)', 'Synopsys CustomSim', 'LTspice + Verilog-A'],
+                    rf: ['CST Studio Suite (Commercial)', 'HFSS (Commercial)', 'Qucs-S (Open Source)',
+                        'OpenEMS (Open Source)'
+                    ],
+                    power: ['LTspice (Free)', 'PLECS (Commercial)', 'Simplis (Commercial)', 'Qucs-S (Open Source)'],
+                    thermal: ['ANSYS Icepak (Commercial)', 'OpenFOAM (Open Source)', 'COMSOL (Commercial)'],
+                    em: ['CST Studio Suite', 'HFSS', 'OpenEMS', 'FEKO']
+                };
+
+                let suggested = toolMap[cat] || ['LTspice', 'Qucs-S', 'CST Studio Suite'];
+
+                if (lic === 'free') {
+                    suggested = suggested.filter(t => t.includes('Free') || t.includes('Open Source') || t.includes(
+                    'OpenEMS'));
+                } else if (lic === 'commercial') {
+                    suggested = suggested.filter(t => t.includes('Commercial') || t.includes('CST') || t.includes(
+                    'HFSS') || t.includes('Cadence') || t.includes('Synopsys'));
+                }
+
+                if (suggested.length === 0) {
+                    suggested = ['LTspice (Free)', 'Qucs-S (Open Source)', 'CST Studio Suite (Commercial)'];
+                }
+
+                return suggested.slice(0, 5);
+            }
 
             // ================================================================
-            // 10. TICKER (updated to include news)
+            // 10. PROBLEM SOLVER
+            // ================================================================
+            const problemSymptoms = {
+                pcb: ['Short circuit', 'Open circuit', 'Crosstalk', 'EMI issues', 'Overheating', 'Impedance mismatch',
+                    'Grounding problem'
+                ],
+                power: ['Voltage instability', 'Ripple / noise', 'Switching noise', 'Overheating', 'Brownout',
+                    'Startup failure'
+                ],
+                signal: ['Timing violation', 'Setup/hold failure', 'Metastability', 'Clock jitter', 'Overshoot / undershoot'
+                ],
+                emc: ['Radiated emissions', 'Conducted emissions', 'Immunity failure', 'ESD failure'],
+                thermal: ['Excessive temperature rise', 'Thermal runaway', 'Uneven heating'],
+                embedded: ['Firmware crash', 'Watchdog reset', 'Communication failure', 'Boot failure', 'Memory corruption'],
+                rf: ['Poor sensitivity', 'Interference', 'Antenna mismatch', 'Low output power', 'Spurious emissions']
+            };
+
+            const problemSolutions = {
+                'Short circuit': 'Check for solder bridges, verify component footprints, use DMM for continuity.',
+                'Open circuit': 'Inspect solder joints, check for broken traces, verify component placement.',
+                'Crosstalk': 'Increase spacing between traces, use guard traces, lower impedance, reduce parallel length.',
+                'EMI issues': 'Add ferrite beads, improve shielding, use LC filters, optimize board stack‑up.',
+                'Overheating': 'Improve heat sinking, increase copper area, use thermal vias, reduce current.',
+                'Impedance mismatch': 'Adjust trace width, use controlled impedance stack‑up, add series termination.',
+                'Grounding problem': 'Use star grounding, separate analog/digital grounds, reduce ground loops.',
+                'Voltage instability': 'Check compensation, improve bypassing, increase output capacitance.',
+                'Ripple / noise': 'Add LC filter, increase switching frequency, improve layout.',
+                'Switching noise': 'Add snubber, increase gate resistance, optimize layout.',
+                'Brownout': 'Check supply margin, increase input capacitance, reduce load.',
+                'Startup failure': 'Check soft‑start, verify enable pin, increase inrush current limit.',
+                'Timing violation': 'Reduce clock frequency, optimize logic, add pipeline stages.',
+                'Setup/hold failure': 'Check clock skew, adjust constraints, use faster logic.',
+                'Metastability': 'Add synchronization registers, reduce clock frequency.',
+                'Clock jitter': 'Improve clock source, add filtering, use PLL.',
+                'Radiated emissions': 'Add shielding, use ferrite beads, improve grounding, reduce loop area.',
+                'ESD failure': 'Add ESD protection diodes, improve grounding, use TVS devices.',
+                'Excessive temperature rise': 'Improve heat sinking, increase airflow, reduce power dissipation.',
+                'Thermal runaway': 'Add thermal shutdown, improve thermal coupling, reduce current.',
+                'Firmware crash': 'Check stack, verify memory allocation, add watchdog, use assertion checks.',
+                'Watchdog reset': 'Adjust timeout, check for stuck tasks, add periodic kicks.',
+                'Communication failure': 'Check baud rate, verify level translation, check termination.',
+                'Boot failure': 'Check power sequencing, verify reset timing, check code integrity.',
+                'Poor sensitivity': 'Check LNA bias, improve matching, reduce noise figure.',
+                'Antenna mismatch': 'Adjust matching network, check VSWR, verify antenna placement.',
+                'Low output power': 'Check supply voltage, improve matching, check bias point.'
+            };
+
+            function resetProblemSolver() {
+                state.probSelections = { category: '', symptom: '' };
+                const steps = dom.problemSolverFlow.querySelectorAll('.step');
+                steps.forEach(s => s.classList.remove('active'));
+                document.querySelector('#problemSolverFlow .step[data-step="1"]').classList.add('active');
+                document.querySelectorAll('#problemSolverFlow .options button').forEach(b => b.classList.remove('selected'));
+                document.getElementById('probResults').innerHTML = '';
+            }
+
+            function initProblemSolver() {
+                document.getElementById('probNext1').addEventListener('click', () => {
+                    const selected = document.querySelector('#problemSolverFlow .step[data-step="1"] .options button.selected');
+                    if (!selected) { showToast('Please select a problem category.', 'error'); return; }
+                    state.probSelections.category = selected.dataset.value;
+
+                    const symptoms = problemSymptoms[state.probSelections.category] || ['General troubleshooting'];
+                    const container = document.getElementById('probSymptoms');
+                    container.innerHTML = symptoms.map(s =>
+                        `<button data-value="${s}">${s}</button>`
+                    ).join('');
+
+                    container.querySelectorAll('button').forEach(b => {
+                        b.addEventListener('click', () => {
+                            container.querySelectorAll('button').forEach(btn => btn.classList.remove(
+                            'selected'));
+                            b.classList.add('selected');
+                        });
+                    });
+
+                    document.querySelector('#problemSolverFlow .step[data-step="1"]').classList.remove('active');
+                    document.querySelector('#problemSolverFlow .step[data-step="2"]').classList.add('active');
+                });
+
+                document.getElementById('probBack2').addEventListener('click', () => {
+                    document.querySelector('#problemSolverFlow .step[data-step="2"]').classList.remove('active');
+                    document.querySelector('#problemSolverFlow .step[data-step="1"]').classList.add('active');
+                });
+
+                document.getElementById('probSolve').addEventListener('click', () => {
+                    const selected = document.querySelector('#problemSolverFlow .step[data-step="2"] .options button.selected');
+                    if (!selected) { showToast('Please select a specific symptom.', 'error'); return; }
+                    state.probSelections.symptom = selected.dataset.value;
+
+                    const solution = problemSolutions[state.probSelections.symptom] ||
+                        'Investigate the issue further using reference materials and diagnostic tools.';
+                    const tools = 'Oscilloscope, multimeter, thermal camera, spectrum analyzer, logic analyzer.' +
+                        ' Recommended: LTspice, CST Studio, OpenEMS for simulation.';
+
+                    document.getElementById('probResults').innerHTML = `
+                        <h4 style="margin-bottom:8px;">Symptom: ${state.probSelections.symptom}</h4>
+                        <p><strong>Suggested diagnosis &amp; solution:</strong><br>${solution}</p>
+                        <p style="margin-top:12px;"><strong>Recommended tools:</strong><br>${tools}</p>
+                        <p style="margin-top:8px;color:var(--text-muted);font-size:14px;">Always consult official documentation and qualified professionals for critical systems.</p>
+                    `;
+
+                    document.querySelector('#problemSolverFlow .step[data-step="2"]').classList.remove('active');
+                    document.querySelector('#problemSolverFlow .step[data-step="3"]').classList.add('active');
+                });
+
+                document.getElementById('probReset').addEventListener('click', resetProblemSolver);
+
+                document.querySelectorAll('#problemSolverFlow .step[data-step="1"] .options button').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const parent = btn.closest('.step');
+                        parent.querySelectorAll('.options button').forEach(b => b.classList.remove('selected'));
+                        btn.classList.add('selected');
+                    });
+                });
+            }
+
+            // ================================================================
+            // 11. TICKER
             // ================================================================
             function updateTicker() {
                 const newsHeadlines = FULL_DATA.filter(d => d.category === 'news')
@@ -1914,7 +2203,7 @@
             }
 
             // ================================================================
-            // 11. WHATSAPP MODAL (same)
+            // 12. WHATSAPP MODAL
             // ================================================================
             function openWhatsAppModal() {
                 dom.whatsappModalOverlay.classList.add('open');
@@ -1927,14 +2216,14 @@
             }
 
             // ================================================================
-            // 12. INIT
+            // 13. INIT
             // ================================================================
             function init() {
                 updateFavBadge();
                 renderResults();
                 updateTicker();
-                // Init sim finder and problem solver (functions defined but not shown for brevity)
-                // They are present in the final file.
+                initSimFinder();
+                initProblemSolver();
 
                 // Search
                 dom.searchInput.addEventListener('input', (e) => {
@@ -1988,7 +2277,7 @@
                     }
                 });
 
-                // Favorites button (show only favorites)
+                // Favorites button
                 dom.favBtn.addEventListener('click', () => {
                     if (state.favorites.length === 0) {
                         showToast('No favorites yet. Click the heart on any item to save it!', 'info');
@@ -2030,6 +2319,11 @@
                             imageHtml =
                                 `<img src="${d.image}" alt="${d.title}" class="news-image" loading="lazy" onerror="this.style.display='none'" />`;
                         }
+                        let extraMeta = '';
+                        if (d.provider) extraMeta += `<span><i class="fas fa-building"></i> ${d.provider}</span>`;
+                        if (d.company) extraMeta += `<span><i class="fas fa-building"></i> ${d.company}</span>`;
+                        if (d.source) extraMeta += `<span><i class="fas fa-newspaper"></i> ${d.source}</span>`;
+                        if (d.date) extraMeta += `<span><i class="fas fa-calendar"></i> ${d.date}</span>`;
                         return `
                             <div class="data-card" data-id="${d.id}">
                                 ${imageHtml}
@@ -2042,6 +2336,7 @@
                                 </div>
                                 <div class="desc">${d.description}</div>
                                 <div class="tags">${tagList}</div>
+                                ${extraMeta ? `<div class="sub" style="margin-bottom:8px;">${extraMeta}</div>` : ''}
                                 <div class="card-bottom">
                                     <div class="price">${priceStr}</div>
                                     ${d.rating ? `<div class="rating"><i class="fas fa-star"></i> ${d.rating.toFixed(1)}</div>` : ''}
@@ -2184,8 +2479,10 @@
                     });
                 });
 
-                console.log('✅ OpenElectronics Platform with News loaded.');
-                console.log('📰 News entries:', MOCK_DATA.length);
+                console.log('✅ ElectroSearch platform loaded successfully!');
+                console.log(`📊 ${FULL_DATA.length} entries across all categories.`);
+                console.log('🔗 Social media links integrated.');
+                console.log('📧 Contact: darshan@electrosearch.io');
             }
 
             // Expose globals
@@ -2194,17 +2491,6 @@
 
             // Start
             init();
-
-            // Placeholder for sim finder and problem solver functions (to avoid errors)
-            // They will be fully implemented in the final file.
-            function resetSimFinder() { /* ... */ }
-            function initSimFinder() { /* ... */ }
-            function resetProblemSolver() { /* ... */ }
-            function initProblemSolver() { /* ... */ }
-
-            // Note: For brevity, the full sim finder and problem solver logic is included
-            // in the final downloadable file but omitted here to keep the response focused.
-            // The final code will have everything.
 
         })();
     </script>
